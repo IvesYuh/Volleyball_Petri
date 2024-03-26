@@ -3,6 +3,7 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -10,10 +11,13 @@ public class Jogadores extends Pessoa{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotNull
     @Column(nullable = false)
     @Min(value = 1)
     private double salario;
+
+    @Pattern(regexp = "(Central|Levantador|Oposto|Libero|Ponteiro)", message = "Posição inexistente")
     private String posicao;
 
     public Jogadores() {
