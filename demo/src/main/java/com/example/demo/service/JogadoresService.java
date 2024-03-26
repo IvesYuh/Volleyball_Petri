@@ -22,14 +22,11 @@ public class JogadoresService {
     }
 
     public Jogadores atualizar(Long id, Jogadores jogadores) {
-        //verificar se o id é valido
         if(jogadoresRepository.existsById(id)) {
-            //atualizar o objeto na base
             jogadores.setId(id);
             return jogadoresRepository.save(jogadores);
         }
         return null;
-        // não realiza nenhuma alteração
     }
 
     public boolean deletar(Long id) {

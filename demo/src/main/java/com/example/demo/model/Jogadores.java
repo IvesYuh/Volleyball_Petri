@@ -20,13 +20,16 @@ public class Jogadores extends Pessoa{
     @Pattern(regexp = "(Central|Levantador|Oposto|Libero|Ponteiro)", message = "Posição inexistente")
     private String posicao;
 
+    private String time;
+
     public Jogadores() {
     }
 
-    public Jogadores(String nome, String cpf, String idade, String altura, double salario, String posicao) {
+    public Jogadores(String nome, String cpf, String idade, String altura, double salario, String posicao, String time) {
         super(nome, cpf, idade, altura);
         this.salario = salario;
         this.posicao = posicao;
+        this.time = time;
     }
 
     public Long getId() {
@@ -52,5 +55,13 @@ public class Jogadores extends Pessoa{
 
     public void setPosicao(String posicao) {
         this.posicao = posicao;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
