@@ -15,6 +15,10 @@ public class JogadoresService {
         return jogadoresRepository.findAll();
     }
 
+    public List<Jogadores> listarPorTime(String time) {
+        return jogadoresRepository.findByTime(time);
+    }
+
     public Jogadores criar(Jogadores jogadores) {
         return jogadoresRepository.save(jogadores);
     }

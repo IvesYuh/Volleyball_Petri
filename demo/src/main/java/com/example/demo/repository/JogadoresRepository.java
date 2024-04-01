@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface JogadoresRepository extends JpaRepository<Jogadores,Long> {
+    List<Jogadores> findByTime(String time);
 }

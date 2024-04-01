@@ -25,6 +25,11 @@ public class JogadoresController {
         return jogadoresService.listarJogadores();
     }
 
+    @GetMapping("/listar-por-time/{time}")
+    public List<Jogadores> listarPorTime(@PathVariable String time) {
+        return jogadoresService.listarPorTime(time);
+    }
+
     @PostMapping
     public Jogadores criar(@Valid @RequestBody Jogadores jogadores) {
         return jogadoresService.criar(jogadores);
