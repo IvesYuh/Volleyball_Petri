@@ -4,7 +4,6 @@ import com.example.demo.model.Jogadores;
 import com.example.demo.repository.JogadoresRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -12,7 +11,6 @@ public class JogadoresService {
 
     @Autowired
     JogadoresRepository jogadoresRepository;
-
     public List<Jogadores> listarJogadores() {
         return jogadoresRepository.findAll();
     }

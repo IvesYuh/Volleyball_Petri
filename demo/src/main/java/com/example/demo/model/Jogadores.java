@@ -17,7 +17,7 @@ public class Jogadores extends Pessoa{
     @Min(value = 1)
     private double salario;
 
-    @Pattern(regexp = "(Central|Levantador|Oposto|Libero|Ponteiro)", message = "Posição inexistente")
+    @Pattern(regexp = "(Central|Levantador|Oposto|Libero|Ponteiro|Treinador)", message = "Posição inexistente")
     private String posicao;
 
     private String time;
